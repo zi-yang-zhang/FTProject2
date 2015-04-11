@@ -156,8 +156,7 @@ def readValueFromFile(filePath):
         if faultyLinks is None:
         	faultyLinks = generateFaultyLinks(line.rstrip('\n').split(','))
         	continue
-    return start,dest,int(dimension), faultyLinks
-
+    return start,dest,int(dimension), [] if faultyLinks is None else faultyLinks
 def generateFaultyLinks(links):
 	faultyLinks = []
 
