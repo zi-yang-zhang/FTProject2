@@ -1,10 +1,17 @@
-import graphGenerator,router
+import router, util 
+start, dest,dimension,faultyLinks = util.readValueFromFile("test.txt")
+print "Start: " + start
+print "Destination: " + dest
+print "Dimension of graph: " + str(dimension)
+print "Faulty links: " + str(faultyLinks)
+print ""
 
 
 
-graph = graphGenerator.generate(5)
 
-result = router.route('10010','01101', 5)
+result = router.route(start,dest, dimension,faultyLinks)
 
+print "============================================"
+print "Routes: "
 for node in result:
 	print node
