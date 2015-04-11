@@ -18,11 +18,30 @@ def getIndexOfOne(bin):
 		if(i=='1'):
 			indexes.append(index)
 		index = index + 1
+	return indexes
 
+def getIndexOfZero(bin):
+	indexes = []
+	index = 0
+	for i in bin:
+		if(i=='0'):
+			indexes.append(index)
+		index = index + 1
 	return indexes
 
 
-def getNextNode(node, index):
-	nodeLsit = list(node)
-	nodeLsit[index] = '1'
-	return "".join(nodeLsit)
+def getNextNode(node, routingTag):
+	nodeList = list(node)
+	indexes = getIndexOfOne(routingTag)
+
+	for index in indexes:
+		if nodeList[index] == '1':
+			nodeList[index] = '0'
+			break
+		else:
+			nodeList[index] = '1'
+			break
+		
+	return "".join(nodeList)
+
+	

@@ -1,11 +1,11 @@
 import util
 
-def route(graph, dest):
+def route(start, dest, dimension):
 	routingStack = []
-	currentNode = graph[0].getNode()
+	currentNode = start
 	while currentNode != dest:
-		routingTag = util.xor(currentNode,dest, 3)
+		routingTag = util.xor(currentNode,dest, dimension)
 		routingStack.append(currentNode)
-		currentNode = util.getNextNode(currentNode,util.getIndexOfOne(routingTag)[0])
+		currentNode = util.getNextNode(currentNode,routingTag)
 	routingStack.append(dest)
 	return routingStack
