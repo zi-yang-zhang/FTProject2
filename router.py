@@ -12,5 +12,7 @@ def route(start, dest, dimension, faultyLinks):
 		currentNode,faultNodes,routingStack = util.getNextNode(currentNode,routingTag, faultyLinks, faultyNodes, routingStack)
 		print "Add " + currentNode +" to routingStack"
 		routingStack.append(currentNode)
-
+	print "============================================"
+	print ""
+	print "Arrived at Destination: " + currentNode
 	return routingStack

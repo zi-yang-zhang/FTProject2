@@ -67,7 +67,7 @@ def getNextNode(currentNode, routingTag, faultyLinks, faultyNodes, routingStack)
 			print "Faulty nodes: "+ str(faultyNodes)
 			print "============================================"
 			return nextNode, faultyNodes, routingStack
-	#print "Add "+currentNode+" to faulty node"
+	print "Add "+currentNode+" to faulty node"
 	faultyNodes.add(currentNode)
 	#print "Faulty nodes: "+ str(faultyNodes)
 	#print "From routing stack: " + str(routingStack)

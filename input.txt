@@ -4,5 +4,5 @@
 101
 #Dimension of the graph(eg. 3)
 3
-#Faulty links seperate by comma(eg. 011-010,011-111)
+#Faulty links seperate by comma(eg. 011-010,011-111), put nothing if non-fault network
 100-000,100-110,001-011,111-011,101-001
